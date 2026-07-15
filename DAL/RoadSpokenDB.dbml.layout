@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.75" name="RoadSpokenDB">
+  <DataContextMoniker Name="/RoadSpokenDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a16ad3af-f1ac-470c-90f0-7edaa4f9c55f" absoluteBounds="6.375, 1.125, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/RoleMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8feac2f-3588-48f9-af12-29522fde8d1b" absoluteBounds="6.39, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aba3894f-d806-4436-ace9-cd09dc470b72" isExpanded="false" absoluteBounds="0.625, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/RouteMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3677e997-bde5-4e2c-878c-fb851048fc62" absoluteBounds="0.63999999999999968, 3.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f91f0242-e302-47c6-9ab5-d1678705142c" absoluteBounds="0.5, 1.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/Currency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="522b4b23-771f-4a57-b791-cf746bf4d742" absoluteBounds="0.51499999999999968, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="519cb69b-b528-4d2b-b91f-195cd96e7550" absoluteBounds="3.625, 1.375, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/LastChange" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4065b226-8f78-42ec-90b6-6f60ab2a7850" absoluteBounds="3.64, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ffe0f2c-edfc-491d-bfc0-5ab68feff059" absoluteBounds="7.625, 2.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/RegionMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de159c31-fe62-420f-82e0-4ecb837e2e68" absoluteBounds="7.64, 3.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7924bf9c-ca0c-4685-b55e-adfe40a191eb" absoluteBounds="5.5, 3.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/Highway" />
+      <nestedChildShapes>
+        <elementListCompartment Id="116804eb-1b0d-488e-81e2-681705020672" absoluteBounds="5.515, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5db2039b-3520-4822-914e-00aec0f28e6d" absoluteBounds="7.75, 5.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/RoadspokenPartner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e73134f8-6f73-4dae-a9d2-16a3ce60c8cf" absoluteBounds="7.765, 5.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ad39618e-8f1f-4bfc-aac6-4d0d58c45cea" absoluteBounds="2.25, 4, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/SeletedHighway" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89a57db7-bb7e-4294-a53c-2bc47811ccec" absoluteBounds="2.265, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="798e6a10-6b37-47cc-ba8c-a6da6ff758fc" isExpanded="false" absoluteBounds="4, 3, 2, 0.45">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/PublicAd" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e05394f8-bb9e-487c-8e1c-576fd37fdc1c" absoluteBounds="4.015, 3.46, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9cd7df8c-28e9-46e1-917d-c5f253a8edba" absoluteBounds="6.625, 0.75, 2, 8.6937483723958326">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/IntermediatePointsChild" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03670f98-630b-4e54-9857-4fe5a3335a86" absoluteBounds="6.64, 1.21, 1.9700000000000002, 8.1337483723958321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="254273a1-4bad-41d7-ae65-a9995b1edeb7" absoluteBounds="4.375, 0.875, 2, 8.5014469401041666">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/IntermediatePoint" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71756d70-c740-4c52-83f6-af425d867100" absoluteBounds="4.39, 1.335, 1.9700000000000002, 7.941446940104167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb949aea-d785-4b94-9d9a-f65af408079d" absoluteBounds="3.625, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/RoadSpokenDBDataContext/UserMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7a2d1f3-6c2c-4498-a2f9-d9f68c638ad1" absoluteBounds="3.64, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

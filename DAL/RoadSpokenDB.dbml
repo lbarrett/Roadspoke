@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Roadspoke" Class="RoadSpokenDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASHISH-PC;Initial Catalog=Roadspoke;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="RoadspokeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.RoleMaster" Member="RoleMasters">
+    <Type Name="RoleMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RouteMaster" Member="RouteMasters">
+    <Type Name="RouteMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RouteName" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="SourceAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SourceLongitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="SourceLatitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DestinationAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DestinationLongitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DestinationLatitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Currency" Member="Currencies">
+    <Type Name="Currency">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ISO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LastChange" Member="LastChanges">
+    <Type Name="LastChange">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UpdateDate" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegionMaster" Member="RegionMasters">
+    <Type Name="RegionMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RegionName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Highways" Member="Highways">
+    <Type Name="Highway">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HighwayName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RoadspokenPartner" Member="RoadspokenPartners">
+    <Type Name="RoadspokenPartner">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PartnerName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PartnerImage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PartnerURL" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SeletedHighway" Member="SeletedHighways">
+    <Type Name="SeletedHighway">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HighwayId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PublicAd" Member="PublicAds">
+    <Type Name="PublicAd">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HighwayRun" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Highway" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RegionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WayPointId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AudioFile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="AdText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VideoFile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Imagefile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Radius" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PointAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PointLongitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TTS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IntroMusic" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ConclusionMusic" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IntermediatePointsChild" Member="IntermediatePointsChilds">
+    <Type Name="IntermediatePointsChild">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PointId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PointAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PointLongitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NewsLink" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsImage" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsVideo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsAudio" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PointTitle" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Sorting" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Direction" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Angle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HighwayRuns" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="SouthBoundText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IntroductoryMusicFile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Angle2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PromoText" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointId2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PointAddress2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="PointLongitude2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NewsLink2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NewsImage2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NewsAudio2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PointTitle2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="IntroductoryMusicFile2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PromoText2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Region2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NewsVideo2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Highway" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConclusionAudio" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ConclusionAudio2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RegionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeekGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayFullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Frequency" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IntermediatePoints" Member="IntermediatePoints">
+    <Type Name="IntermediatePoint">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PointAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PointLongitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NewsLink" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsImage" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsVideo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsAudio" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PointTitle" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Sorting" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Direction" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Angle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HighwayRuns" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="SouthBoundText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IntroductoryMusicFile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Angle2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PromoText" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointAddress2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="PointLongitude2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NewsLink2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NewsImage2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NewsAudio2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PointTitle2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="IntroductoryMusicFile2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PromoText2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Region2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NewsVideo2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Highway" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConclusionAudio" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ConclusionAudio2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RegionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeekGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayFullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Frequency" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdatedFromOnePoint" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserMaster" Member="UserMasters">
+    <Type Name="UserMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Chamber" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_GetUserList" Method="sp_GetUserList">
+    <ElementType Name="sp_GetUserListResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserPassword" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetAllRoutePoints" Method="sp_GetAllRoutePoints">
+    <Parameter Name="Longitude" Parameter="longitude" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Latitude" Parameter="latitude" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="sp_GetAllRoutePointsResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PointLongitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NewsLink1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsImage1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsVideo1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsAudio1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsText1" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PointTitle1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Sorting" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IntroductoryMusicFile1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText1" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLongitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLatitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsLink2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsImage2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsVideo2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsAudio2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsText2" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PointTitle2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="IntroductoryMusicFile2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio2" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Direction" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetAllAdByHighway" Method="sp_GetAllAdByHighway">
+    <Parameter Name="Highway" Parameter="highway" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_GetAllAdByHighwayResult">
+      <Column Name="AdAudio" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="AdImage" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdRadius" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdLongitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AdLatitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TTS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IntroMusic" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionMusic" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetAllRouteAd" Method="sp_GetAllRouteAd">
+    <Parameter Name="Longitude" Parameter="longitude" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Latitude" Parameter="latitude" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="sp_GetAllRouteAdResult">
+      <Column Name="AdAudio" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="AdImage" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdRadius" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdLongitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AdLatitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TTS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IntroMusic" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionMusic" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetNearByAd" Method="sp_GetNearByAd">
+    <Parameter Name="Longitude" Parameter="longitude" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Latitude" Parameter="latitude" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Radius" Parameter="radius" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_GetNearByAdResult">
+      <Column Name="AdAudio" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="AdImage" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdRadius" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdLongitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AdLatitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TTS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IntroMusic" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionMusic" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetRegionByAd" Method="sp_GetRegionByAd">
+    <Parameter Name="Region" Parameter="region" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="sp_GetRegionByAdResult">
+      <Column Name="AdAudio" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="AdImage" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AdRadius" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdLongitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AdLatitude" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TTS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IntroMusic" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionMusic" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetNearByRoutePoints" Method="sp_GetNearByRoutePoints">
+    <Parameter Name="Longitude" Parameter="longitude" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Latitude" Parameter="latitude" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Radius" Parameter="radius" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Frequency" Parameter="frequency" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_GetNearByRoutePointsResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PointLongitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NewsLink1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsImage1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsVideo1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsAudio1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsText1" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PointTitle1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Sorting" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IntroductoryMusicFile1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText1" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLongitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLatitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsLink2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsImage2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsVideo2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsAudio2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsText2" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PointTitle2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="IntroductoryMusicFile2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio2" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Direction" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetRegionByRoutePoints" Method="sp_GetRegionByRoutePoints">
+    <Parameter Name="Region" Parameter="region" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Frequency" Parameter="frequency" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_GetRegionByRoutePointsResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PointLongitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NewsLink1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsImage1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsVideo1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsAudio1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsText1" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PointTitle1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Sorting" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IntroductoryMusicFile1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText1" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLongitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLatitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsLink2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsImage2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsVideo2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsAudio2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsText2" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PointTitle2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="IntroductoryMusicFile2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio2" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Direction" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetAllRoutePointsByHighway2" Method="sp_GetAllRoutePointsByHighway2">
+    <Parameter Name="Highway" Parameter="highway" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_GetAllRoutePointsByHighway2Result">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PointLongitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NewsLink1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsImage1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsVideo1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsAudio1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsText1" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PointTitle1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Sorting" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IntroductoryMusicFile1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText1" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLongitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLatitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsLink2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsImage2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsVideo2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsAudio2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsText2" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PointTitle2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="IntroductoryMusicFile2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio2" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Direction" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetAllRoutePointsByHighway" Method="sp_GetAllRoutePointsByHighway">
+    <Parameter Name="Highway" Parameter="highway" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Frequency" Parameter="frequency" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_GetAllRoutePointsByHighwayResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PointLongitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PointLatitude1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NewsLink1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsImage1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsVideo1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsAudio1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NewsText1" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PointTitle1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Sorting" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IntroductoryMusicFile1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText1" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointAddress2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLongitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PointLatitude2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsLink2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsImage2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsVideo2" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsAudio2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsText2" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PointTitle2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="IntroductoryMusicFile2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConclusionAudio2" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PromoText2" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Direction" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

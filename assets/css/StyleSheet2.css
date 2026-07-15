@@ -1,0 +1,76 @@
+﻿body {
+}
+.editForm
+ {
+    font-family: 'Segoe UI', Arial, Verdana;
+    font-size: 11px;
+    margin: 0;
+    padding:0;
+    
+ }
+ .calendar-title
+ {
+	text-align :center ;
+ }
+.header
+{
+    padding: 17px 0 10px 20px;
+    background: #f6f7f9;
+    border-bottom: solid 1px #d5d5d5;
+    color: #0066cc;
+    font-size: 17px;
+}
+
+.footer
+{
+    padding: 7px 0px 13px 0px;
+    background: #edfbfe;
+    border-top: solid 1px #93b0c2;
+    border-bottom: solid 1px #93b0c2;
+     border-right : solid 1px #93b0c2;
+     
+    text-align: right  ;
+    
+    position: absolute;
+    bottom: 0;
+    left :1px;
+    width: 100%;
+}
+
+.content
+{
+    padding: 17px 0 10px 20px;
+}
+
+.editForm p
+{
+    font: Arial Verdana;
+}
+.modalBackground
+
+{
+
+  background-color:Gray;
+
+  filter:alpha(opacity=40);
+
+  opacity:0.5;
+
+}
+ 
+
+.ModalWindow
+
+{
+
+  border: solid1px#c0c0c0;
+
+  background:#f0f0f0;
+
+  padding: 0px10px10px10px;
+
+  position:absolute;
+
+  top:-1000px;
+
+}
